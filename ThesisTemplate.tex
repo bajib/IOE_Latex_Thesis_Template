@@ -1,0 +1,98 @@
+%IOE Latex Template Prepared by Dr. Basanta Joshi and Mr. Ramesh Bhandari taking CUEDthesisPSnPDF template as reference
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{hhline}
+\usepackage[]{graphicx}
+\usepackage[left=1.5in, right=1in,top=1in,bottom=1in,headheight=6pt, a4paper]{geometry}
+\usepackage{titling}
+\usepackage{booktabs}
+\usepackage{natbib}
+%\usepackage{times}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage[font=normalsize,labelfont=bf,tableposition=top]{caption}
+\usepackage{setspace}
+\usepackage[explicit]{titlesec}
+
+\linespread{1.3}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0em}
+\titleformat{\chapter}[display]
+    {\centering\normalfont\normalsize\bfseries}{\MakeUppercase{\chaptertitlename} \thechapter}{0pt}{\normalsize #1}
+\titlespacing{\chapter}{0pt}{0pt}{20pt}
+
+
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries}{\thesection}{1em}{#1}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection}{1em}{#1}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{#1}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\graphicspath{{./Graphics/}} 
+
+\captionsetup[table]{singlelinecheck=off}
+\title{Thesis title.............}
+\author{Student Name}
+\date{August, 2021}
+\renewcommand{\bibname}{REFERENCES}
+
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+\renewcommand{\listtablename}{LIST OF TABLES}
+
+\begin{document}
+
+\include{Cover/cover}
+\include{Title/title}
+\include{Copyright/copyright}
+\include{Declaration/declaration}
+\include{Recommendation/recommendation}
+\include{Approval/approval}
+\include{Acknowledgement/acknowledgement}
+\include{Abstract/abstract}
+
+%=================TOC=========================================================================
+
+\renewcommand{\baselinestretch}{0.5}
+\addcontentsline{toc}{chapter}{\contentsname}{\tableofcontents}
+\newpage
+\renewcommand{\baselinestretch}{1.5}
+\addcontentsline{toc}{chapter}{\listfigurename}{ \listoffigures}
+\newpage
+\addcontentsline{toc}{chapter}{\listtablename}{ \listoftables}
+\newpage
+%=============================================================================
+\include{Abbreviations/abbreviations}
+
+%=====================Report Body=============================================
+
+\include{Introduction/introduction}
+\include{Literaturereview/literaturereview}
+\include{Methodology/methodology}
+\include{ResultNdiscussion/resultNdiscussion}
+\include{Conclusions/conclusions}
+
+%========================References setup=========================================================
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{ref}%finalReport is bib file, replace it by your bib file
+\addcontentsline{toc}{chapter}{REFERENCES}
+%=============================================================================================
+
+%================================Appendices Setup=================================================
+\include{Appendix1/appendix1.tex}
+\chapter*{APPENDIX A}
+\addcontentsline{toc}{chapter}{APPENDIX A}
+
+
+
+
+%=========================================================================
+\end{document}

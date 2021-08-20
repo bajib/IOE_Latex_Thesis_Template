@@ -1,0 +1,28 @@
+%\def\baselinestretch{1}
+\chapter{LITERATURE REVIEW}
+
+Nepali speech recognition is the process of translating the correctly spoken Nepali language to its correct textual representation.  In 2017, the first paper on Nepali ASR is published describes the implementation of HMM (Hidden Markov Model) based speaker independent isolated word Automatic Speech Recognition (ASR) system for Nepali Language, a commonly spoken language in Nepal. The system has been developed in python using numpy and YAHMM libraries. The system is trained in different Nepali words by collecting data from different speakers in room environment. The tests have also been carried out in similar setup. This paper details the experiment by discussing the concept, implementation details and overall interpretation of the system. The experimental results show that the overall accuracy of the presented system is about 75 percentage \cite{ssarma2017hmm}. 
+\\
+A Neural Network based Nepali Speech Recognition model, RNN (Recurrent Neural Networks) is used for processing sequential audio data. CTC (Connectionist RNN to train over audio data. CTC is used as a probabilistic approach of maximizing the occurrence probability of the desired labels from RNN output. After processing through RNN and CTC layers, Nepali text is obtained as output \cite{paribesh2019nepali}. On implementing a trained model, audio features are processed by RNN and Softmax layer successively. The output from Softmax layer is the occurrence probabilities of different characters at different time steps. The task of decoding is to find a label with maximum occurrence probability \cite{paribesh2019nepali}. 
+A new model was purposed model which consists of CNN, GRU and CTC network\cite{bhatta2020nepali}. The feature in the raw audio is extracted by using MFCC algorithm. CNN
+is for learning high level features. GRU is responsible for constructing the acoustic
+model. CTC is responsible for decoding. 
+
+
+A multi-agent based
+system is used in a heterogeneous power system to maximize the use of energy sources using a bounded knapsack problem. Using this multi-agent system, a higher utilization of power
+produced by preferred source is achieved\cite{shrestha2021multi}.
+Another work \cite{sharma2020user} utilized LSTM based Autoencoder
+using the similar concept to the previous work which models
+the user behavior using session activities and therefore detect
+the abnormal data points.
+
+
+%%% ----------------------------------------------------------------------
+
+% ------------------------------------------------------------------------
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../thesis"
+%%% End: 
